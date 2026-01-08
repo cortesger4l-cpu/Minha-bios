@@ -1,0 +1,394 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo geral da página */
+body {
+    background-color: #f9d9b5;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Header normal */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo {
+    margin-top: 40px;
+    height: 120px;
+    /* altura da faixa */
+    background-image: url("./imagens/coro.png");
+    background-size: cover;
+    /* preenche sem distorcer */
+    background-position: center;
+    /* centraliza a imagem */
+    display: flex;
+    align-items: center;
+    /* central vertical */
+    justify-content: center;
+    /* central horizontal */
+}
+
+/* Texto */
+.titulo h1 {
+    background: linear-gradient(to top, #ffff00b3, #d1d102);
+    font-weight: 700;
+    /* Exemplo: Bold */
+    font-style: italic;
+    /* Exemplo: Itálico */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+}
+
+/*--------------------------------------------------------*/
+.margem {
+    margin: 5%;
+}
+
+.centro-de-tela {
+    display: flex;
+    /* Ativa o flexbox */
+    justify-content: space-evenly;
+    /* Centraliza horizontalmente (no eixo principal) */
+    align-items: center;
+    /* Centraliza verticalmente (no eixo transversal) */
+    gap: 5%;
+    /* Adiciona espaço entre os botões */
+    flex-wrap: wrap;
+    /* Permite que os botões quebrem a linha em telas menores */
+    width: 100%;
+    /* Garante que o contêiner ocupe toda a largura disponível */
+}
+
+.ebook-btn,
+.sobre-btn,
+.social-btn {
+    margin-bottom: 5%;
+    width: 100%;
+    max-width: 320px;
+
+    aspect-ratio: 8 / 10;
+
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* camada escura para contraste */
+.ebook-btn::before,
+.sobre-btn::before,
+.social-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* texto */
+.ebook-btn span,
+.sobre-btn span,
+.social-btn span {
+    position: relative;
+    color: #ffff00e5;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* -----Confg geral de imagens */
+.sobre-btn,
+.ebook-btn,
+.social-btn {
+    background-size: cover;
+    background-position: center;
+}
+
+/*-----E-book-----*/
+.ebook-btn {
+    background-image: url("./imagens/e-book.png");
+}
+
+/*-----Sobre-----*/
+.sobre-btn {
+    background-image: url("./imagens/sobre.PNG");
+}
+
+/*-----Social-----*/
+.social-btn {
+    background-image: url("./imagens/redes.png");
+}
+
+/*-----E-book-----*/
+.ebooks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sobre-card,
+.ebook-card {
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ebook-card:hover {
+    transform: scale(1.05);
+}
+
+.detail-img {
+    width: 100%;
+    max-width: 320px;
+    /* limite de largura */
+    max-height: 45vh;
+    /* nunca passa de 45% da altura da tela */
+
+    object-fit: contain;
+    /* mantém proporção */
+    border-radius: 10px;
+
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.ebook-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.ebook-card h4 {
+    margin: 8px 0 4px;
+}
+
+.ebook-card p {
+    font-size: 14px;
+}
+
+/*------------------------------------------------*/
+
+/*-----Sobre-----*/
+.SobrePara {
+    text-align: left;
+}
+
+.sobrepara h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.SobrePara p {
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.popupgrande {
+    background: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 80%;
+
+    max-height: 85vh;
+    /* limite da altura */
+    overflow-y: auto;
+    /* scroll interno */
+
+    border-radius: 12px;
+    text-align: center;
+
+    position: relative;
+    /* para o botão fechar */
+}
+
+/*------------------------------------------------*/
+
+/*-----Social-----*/
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    text-decoration: none;
+    background: #f5f5f5;
+    color: #111;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-card img {
+    width: 45px;
+    height: 45px;
+}
+
+.social-card strong {
+    display: block;
+    font-size: 16px;
+}
+
+.social-card span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* hover */
+.social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* cores por rede */
+.social-card.instagram {
+    background: linear-gradient(135deg, #feda75, #d62976, #962fbf);
+    color: #fff;
+    margin-top: 6px;
+}
+
+.social-card.tiktok {
+    background: linear-gradient(135deg, #25f4ee, #000000, #fe2c55);
+    color: #fff;
+    margin-top: 6px;
+}
+
+.social-card.youtube {
+    background: linear-gradient(135deg, #fb9393, #cc0000);
+    color: #fff;
+    margin-top: 6px;
+}
+
+/*-----------------------------------------*/
+
+.popup-overlay {
+    position: fixed;
+    /* tira do fluxo da página */
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: none;
+    /* escondido por padrão */
+    align-items: center;
+    /* central vertical */
+    justify-content: center;
+    /* central horizontal */
+
+    z-index: 9999;
+    /* fica acima de tudo */
+}
+
+.popup {
+    background: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+
+    max-height: 85vh;
+    /* limite da altura */
+    overflow-y: auto;
+    /* scroll interno */
+
+    border-radius: 12px;
+    text-align: center;
+
+    position: relative;
+    /* para o botão fechar */
+}
+
+.popup-detail {
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.popup-detail p {
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #f5f5f5;
+    color: #333;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.buy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 20px;
+    padding: 14px 22px;
+
+    background: linear-gradient(135deg, #1db954, #17a34a);
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 999px;
+    /* botão pill */
+    box-shadow: 0 8px 18px rgba(29, 185, 84, 0.35);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(29, 185, 84, 0.45);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.close:hover {
+    background: #e0e0e0;
+    transform: scale(1.08);
+}

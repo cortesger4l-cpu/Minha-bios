@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Bio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="titulo">
+        <h1>Verbum Dei</h1>
+    </header>
+
+    <div class="margem ">
+        <main>
+            <div class="centro-de-tela">
+                <!-- BOTÃO COM IMAGEM -->
+                <button id="btnEbooks" class="ebook-btn">
+                    <span>E-books</span>
+                </button>
+
+                <button id="btnRedes" class="social-btn">
+                    <span>Redes Sociais</span>
+                </button>
+
+                <button id="btnSobre" class="sobre-btn">
+                    <span>Sobre</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- POPUP E-BOOK-->
+    <div id="popup" class="popup-overlay">
+        <div class="popup">
+            <span id="closePopup" class="close">&times;</span>
+
+            <h2>E-books disponíveis</h2>
+
+            <!-- GRID VAZIA -->
+            <div class="ebooks-grid"></div>
+        </div>
+    </div>
+
+
+    <!-- POPUP DETALHES E-BOOK-->
+    <div id="ebookDetail" class="popup-overlay">
+        <div class="popup popup-detail">
+            <span id="closeDetail" class="close">&times;</span>
+
+            <img id="detailImg" class="detail-img" src="" alt="">
+            <h2 id="detailTitle"></h2>
+            <p id="detailText"></p>
+
+            <a id="buyLink" class="buy-btn" target="_blank">
+                <h4 id="buytxt"></h4>
+            </a>
+        </div>
+    </div>
+
+    <!-- POPUP Sobre-->
+    <div id="sobrePopup" class="popup-overlay">
+        <div class="popupgrande">
+            <span id="closeSobre" class="close">&times;</span>
+
+            <h2>Sobre o Verbum Dei</h2>
+            <a class="SobrePara">
+                <p>
+                    O <strong>Verbum Dei</strong> nasceu com o propósito de levar reflexões
+                    profundas sobre fé, espiritualidade e vida cristã de forma simples e acessível.
+                </p>
+
+                <p>
+                    Aqui você encontrará <strong>cortes e conteúdos religiosos</strong> que convidam
+                    à reflexão, ao silêncio interior e ao fortalecimento da fé no dia a dia.
+                </p>
+
+                <h3>📚 Produtos e recomendações</h3>
+
+                <p>
+                    Alguns conteúdos e produtos indicados aqui, como e-books e materiais digitais,
+                    são disponibilizados por plataformas <strong>seguras e reconhecidas</strong>,
+                    como a <strong>Hotmart</strong>.
+                </p>
+
+                <p>
+                    Ao clicar em um produto, você será redirecionado diretamente para o site oficial
+                    da plataforma, garantindo segurança na compra e acesso imediato ao conteúdo.
+                </p>
+
+                <h3>❤️ Transparência</h3>
+
+                <p>
+                    O Verbum Dei preza pela <strong>honestidade e transparência</strong>. As
+                    recomendações são feitas apenas quando acreditamos que o conteúdo pode
+                    agregar valor espiritual e pessoal à sua jornada.
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <!--REDES-->
+    <div id="socialPopup" class="popup-overlay">
+        <div class="popup">
+            <span id="closeSocial" class="close">&times;</span>
+
+            <h2>Minhas redes</h2>
+
+            <a href="https://www.instagram.com/verdum_dei/" target="_blank" class="social-card instagram">
+                <img src="./imagens/redes/Instagram.webp" alt="Instagram">
+                <div>
+                    <strong>Instagram</strong>
+                    <span>@verdum_dei</span>
+                </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@verbum_del" target="_blank" class="social-card tiktok">
+                <img src="./imagens/redes/Tiktok.webp" alt="TikTok">
+                <div>
+                    <strong>TikTok</strong>
+                    <span>@verbum_del</span>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/@sh0rtsp0t-k7p" target="_blank" class="social-card youtube">
+                <img src="./imagens/redes/youtube.webp" alt="YouTube">
+                <div>
+                    <strong>YouTube</strong>
+                    <span>@Verbum_Del</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
