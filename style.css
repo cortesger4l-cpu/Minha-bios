@@ -21,7 +21,7 @@ header {
     margin-top: 40px;
     height: 120px;
     /* altura da faixa */
-    background-image: url("./imagens/coro.png");
+    background-image: url("./coro.png");
     background-size: cover;
     /* preenche sem distorcer */
     background-position: center;
@@ -118,17 +118,17 @@ header {
 
 /*-----E-book-----*/
 .ebook-btn {
-    background-image: url("./imagens/e-book.png");
+    background-image: url("./e-book.png");
 }
 
 /*-----Sobre-----*/
 .sobre-btn {
-    background-image: url("./imagens/sobre.PNG");
+    background-image: url("./sobre.PNG");
 }
 
 /*-----Social-----*/
 .social-btn {
-    background-image: url("./imagens/redes.png");
+    background-image: url("./redes.png");
 }
 
 /*-----E-book-----*/
@@ -391,4 +391,5 @@ header {
 .close:hover {
     background: #e0e0e0;
     transform: scale(1.08);
+
 }
